@@ -1,0 +1,129 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+<div class="hero-section bg-primary text-white rounded p-5 mb-5">
+    <div class="row align-items-center">
+        <div class="col-md-6">
+            <h1 class="display-4">
+                <i class="fas fa-graduation-cap"></i>
+                University Result Portal
+            </h1>
+            <p class="lead">Access your MBBS program results quickly and securely</p>
+        </div>
+        <div class="col-md-6">
+            <div class="text-center">
+                <i class="fas fa-award fa-5x opacity-75"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-8 mx-auto">
+        <div class="card shadow">
+            <div class="card-header bg-success text-white">
+                <h4 class="mb-0">
+                    <i class="fas fa-search"></i>
+                    Look Up Your Results
+                </h4>
+            </div>
+            <div class="card-body">
+                <p class="text-muted mb-4">
+                    Enter your roll number and either your ID card number or phone number to view your results.
+                </p>
+                
+                <form method="POST" action="{{ url_for('main.lookup_results') }}">
+                    {{ form.hidden_tag() }}
+                    
+                    <div class="mb-3">
+                        {{ form.roll_number.label(class="form-label") }}
+                        {{ form.roll_number(class="form-control" + (" is-invalid" if form.roll_number.errors else ""), placeholder="Enter your roll number") }}
+                        {% if form.roll_number.errors %}
+                            <div class="invalid-feedback">
+                                {% for error in form.roll_number.errors %}
+                                    {{ error }}
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                {{ form.id_card_number.label(class="form-label") }}
+                                {{ form.id_card_number(class="form-control" + (" is-invalid" if form.id_card_number.errors else ""), placeholder="Enter ID card number") }}
+                                {% if form.id_card_number.errors %}
+                                    <div class="invalid-feedback">
+                                        {% for error in form.id_card_number.errors %}
+                                            {{ error }}
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                {{ form.phone_number.label(class="form-label") }}
+                                {{ form.phone_number(class="form-control" + (" is-invalid" if form.phone_number.errors else ""), placeholder="Enter phone number") }}
+                                {% if form.phone_number.errors %}
+                                    <div class="invalid-feedback">
+                                        {% for error in form.phone_number.errors %}
+                                            {{ error }}
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center">
+                        {{ form.submit(class="btn btn-primary btn-lg") }}
+                    </div>
+                </form>
+                
+                <div class="mt-4 p-3 bg-light rounded">
+                    <h6 class="text-primary">
+                        <i class="fas fa-info-circle"></i>
+                        Instructions:
+                    </h6>
+                    <ul class="mb-0 small">
+                        <li>Enter your roll number exactly as provided by the university</li>
+                        <li>Provide either your ID card number OR phone number for verification</li>
+                        <li>Contact the administration if you face any issues accessing your results</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-4">
+        <div class="card h-100">
+            <div class="card-body text-center">
+                <i class="fas fa-clock fa-3x text-primary mb-3"></i>
+                <h5>Quick Access</h5>
+                <p class="text-muted">Get your results instantly with secure authentication</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100">
+            <div class="card-body text-center">
+                <i class="fas fa-shield-alt fa-3x text-success mb-3"></i>
+                <h5>Secure Portal</h5>
+                <p class="text-muted">Your data is protected with multi-factor authentication</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100">
+            <div class="card-body text-center">
+                <i class="fas fa-mobile-alt fa-3x text-info mb-3"></i>
+                <h5>Mobile Friendly</h5>
+                <p class="text-muted">Access your results from any device, anywhere</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,142 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <h2>
+            <i class="fas fa-envelope"></i>
+            Contact Us
+        </h2>
+        <p class="lead">Get in touch with our support team for any assistance</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-8">
+        <div class="card shadow">
+            <div class="card-header bg-primary text-white">
+                <h5 class="mb-0">Support Information</h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6 class="text-primary">
+                            <i class="fas fa-clock"></i>
+                            Office Hours
+                        </h6>
+                        <p>
+                            <strong>Monday - Friday:</strong> 9:00 AM - 5:00 PM<br>
+                            <strong>Saturday:</strong> 9:00 AM - 1:00 PM<br>
+                            <strong>Sunday:</strong> Closed
+                        </p>
+                        
+                        <h6 class="text-primary mt-4">
+                            <i class="fas fa-phone"></i>
+                            Contact Numbers
+                        </h6>
+                        <p>
+                            <strong>Main Office:</strong> +1 (555) 123-4567<br>
+                            <strong>IT Support:</strong> +1 (555) 123-4568<br>
+                            <strong>Student Services:</strong> +1 (555) 123-4569
+                        </p>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <h6 class="text-primary">
+                            <i class="fas fa-envelope"></i>
+                            Email Addresses
+                        </h6>
+                        <p>
+                            <strong>General Inquiries:</strong><br>
+                            <a href="mailto:info@university.edu">info@university.edu</a><br><br>
+                            
+                            <strong>Technical Support:</strong><br>
+                            <a href="mailto:support@university.edu">support@university.edu</a><br><br>
+                            
+                            <strong>Result Queries:</strong><br>
+                            <a href="mailto:results@university.edu">results@university.edu</a>
+                        </p>
+                        
+                        <h6 class="text-primary mt-4">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Address
+                        </h6>
+                        <p>
+                            Medical University<br>
+                            123 University Drive<br>
+                            Education City, State 12345<br>
+                            Country
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-lg-4">
+        <div class="card shadow mb-3">
+            <div class="card-header bg-info text-white">
+                <h6 class="mb-0">Frequently Asked Questions</h6>
+            </div>
+            <div class="card-body">
+                <div class="accordion accordion-flush" id="faqAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faq1">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
+                                Can't access my results?
+                            </button>
+                        </h2>
+                        <div id="collapse1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body small">
+                                Ensure you're using the correct roll number and either your ID card number or phone number. If issues persist, contact support.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faq2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
+                                When are results published?
+                            </button>
+                        </h2>
+                        <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body small">
+                                Results are typically published within 2-3 weeks after the examination date. You'll be notified via email when results are available.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faq3">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
+                                How to get result certificates?
+                            </button>
+                        </h2>
+                        <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body small">
+                                Official certificates can be requested from the academic office. Visit the registrar's office with a formal application.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card shadow">
+            <div class="card-header bg-warning text-dark">
+                <h6 class="mb-0">Emergency Contact</h6>
+            </div>
+            <div class="card-body">
+                <p class="small mb-2">
+                    For urgent result-related issues during non-office hours:
+                </p>
+                <p class="mb-0">
+                    <i class="fas fa-phone text-danger"></i>
+                    <strong>Emergency Hotline:</strong><br>
+                    +1 (555) 911-HELP (4357)
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
