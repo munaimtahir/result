@@ -1,0 +1,125 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <h2>
+            <i class="fas fa-info-circle"></i>
+            About University Result Portal
+        </h2>
+        <p class="lead">Learn more about our MBBS program result management system</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-8">
+        <div class="card shadow">
+            <div class="card-body">
+                <h4 class="text-primary">About Our Portal</h4>
+                <p>
+                    The University Result Portal is a comprehensive web-based system designed specifically 
+                    for managing and accessing MBBS program results. Our platform ensures secure, efficient, 
+                    and transparent result distribution for students, faculty, and administration.
+                </p>
+                
+                <h5 class="mt-4">Key Features</h5>
+                <ul>
+                    <li><strong>Secure Access:</strong> Dual authentication using roll number with either ID card number or phone number</li>
+                    <li><strong>Real-time Results:</strong> Instant access to published results</li>
+                    <li><strong>Comprehensive Coverage:</strong> All 5 years of MBBS program supported</li>
+                    <li><strong>Multiple Assessments:</strong> Mid-term, final, sessional, and practical exam results</li>
+                    <li><strong>Statistical Analysis:</strong> Performance analytics and grade distributions</li>
+                    <li><strong>Bulk Upload:</strong> Efficient result upload using CSV/Excel files</li>
+                </ul>
+                
+                <h5 class="mt-4">Academic Structure</h5>
+                <p>
+                    Our system is designed around the 5-year MBBS program structure with:
+                </p>
+                <ul>
+                    <li>10 semesters (2 per academic year)</li>
+                    <li>Regular assessments every 2-3 months</li>
+                    <li>Multiple examination types per semester</li>
+                    <li>Comprehensive subject coverage</li>
+                </ul>
+                
+                <h5 class="mt-4">Security & Privacy</h5>
+                <p>
+                    We prioritize the security and privacy of student data:
+                </p>
+                <ul>
+                    <li>Multi-factor authentication for student access</li>
+                    <li>Secure admin panel with role-based access</li>
+                    <li>Encrypted data transmission</li>
+                    <li>Regular security audits and updates</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-lg-4">
+        <div class="card shadow mb-3">
+            <div class="card-header bg-primary text-white">
+                <h6 class="mb-0">System Statistics</h6>
+            </div>
+            <div class="card-body">
+                <div class="row text-center">
+                    <div class="col-6">
+                        <h4 class="text-primary">5</h4>
+                        <small>Years Program</small>
+                    </div>
+                    <div class="col-6">
+                        <h4 class="text-success">10</h4>
+                        <small>Semesters</small>
+                    </div>
+                </div>
+                <hr>
+                <div class="row text-center">
+                    <div class="col-6">
+                        <h4 class="text-info">24/7</h4>
+                        <small>Availability</small>
+                    </div>
+                    <div class="col-6">
+                        <h4 class="text-warning">100%</h4>
+                        <small>Secure</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card shadow mb-3">
+            <div class="card-header bg-success text-white">
+                <h6 class="mb-0">Quick Links</h6>
+            </div>
+            <div class="card-body">
+                <div class="d-grid gap-2">
+                    <a href="{{ url_for('main.index') }}" class="btn btn-outline-primary btn-sm">
+                        <i class="fas fa-search"></i> Check Results
+                    </a>
+                    <a href="{{ url_for('main.contact') }}" class="btn btn-outline-info btn-sm">
+                        <i class="fas fa-envelope"></i> Contact Support
+                    </a>
+                    <a href="{{ url_for('auth.login') }}" class="btn btn-outline-secondary btn-sm">
+                        <i class="fas fa-sign-in-alt"></i> Admin Login
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card shadow">
+            <div class="card-header bg-info text-white">
+                <h6 class="mb-0">Need Help?</h6>
+            </div>
+            <div class="card-body">
+                <p class="small mb-2">
+                    If you're having trouble accessing your results or need technical support, 
+                    please contact our helpdesk.
+                </p>
+                <a href="{{ url_for('main.contact') }}" class="btn btn-info btn-sm">
+                    Get Help
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
